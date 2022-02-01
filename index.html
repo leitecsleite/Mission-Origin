@@ -20,7 +20,7 @@
                     <img src="images/build.svg" alt="Selo" id="selo">
                     <img src="images/foto.svg" alt="Foto Pessoal" id='fotoPerfil'>
                 </div>
-                <h1>Tiago Luchtenberg</h1>
+                <h1 id="userName">Tiago Luchtenberg</h1>
                 <div id="name">
                     <img src="images/GitHub.svg" alt="GitHub">
                      <p>tiago_luch</p>
@@ -29,25 +29,53 @@
                      start programing for web
                  </p>
                    
-                 <div id="midia-social">
+                 <div id="midiaSocial">
                      <div id="youtube">
-                         <a href=""target="_blanck"><img src="images/Icon ionic-logo-youtube.svg"  alt="youtube" class="fundo-social"></a>
+                         <a href="https:/youtube/lucascsleite"target="_blanck"><img src="images/Icon ionic-logo-youtube.svg"  alt="youtube" class="fundo-social"></a>
                      </div>
 
                      <div id="instagram" >
-                         <a href="" target="_blanck"> <img src="images/Instagram.svg" alt="instagram"class="fundo-social"></a>
+                         <a href="https:/instagram/lucascsleite" target="_blanck"> <img src="images/Instagram.svg" alt="instagram"class="fundo-social"></a>
                      </div>
 
                      <div id="facebook">
-                         <a href="" target="_blanck"><img src="images/Facebook.svg" alt="facebook"class="fundo-social"></a>
+                         <a href="https:/facebook/lucascsleite" target="_blanck"><img src="images/Facebook.svg" alt="facebook"class="fundo-social"></a>
                      </div>
 
                      <div id="twitter">
-                         <a href=""target="_blanck"> <img src="images/Twitter.svg" alt=" twitter"class="fundo-social"></a> 
+                         <a href="https:/twitter/lucascsleite"target="_blanck"> <img src="images/Twitter.svg" alt=" twitter"class="fundo-social"></a> 
                      </div>
                  </div>
             </div>
         </div>
     </main>
+
+    <script>
+
+
+        const links = {
+            youtube:'lucascsleite',
+            instagram:'lucascsleite',
+            facebook: 'lucascsleite',
+            twitter:'lucascsleite',
+        }
+    
+     
+    function changeName(){
+       //document.getElementById('userName').textContent = 'Lucas Leite'
+       // userName.textContent = 'Lucas Leite'
+     for(let div of midiaSocial.children){
+       const social = div.getAttribute('id')
+
+       div.children[0].href = `https://${social}.com/${links[social]}`
+
+       console.log(div.children[0].href)
+     }
+       
+     
+    }
+    
+    changeName(); 
+    </script>
 </body>
 </html>
