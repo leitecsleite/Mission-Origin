@@ -70,7 +70,11 @@ main{
     margin: auto;
     position: relative;
     right: 2.6rem;
-  
+
+    width:10rem ;
+    height:11.5rem;
+    
+    clip-path: polygon(50% 0, 100% 25%, 100% 74%, 50% 100%, 1% 74%, 0 25%);
 }
 
 #name{
