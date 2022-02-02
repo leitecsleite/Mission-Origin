@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +10,10 @@
 
 
     <script>
-        
+
     </script>
 </head>
+
 <body>
     <main>
         <div id="principal-content">
@@ -23,83 +25,38 @@
                 <h1 id="userName">Tiago Luchtenberg</h1>
                 <div id="name">
                     <img src="images/GitHub.svg" alt="GitHub">
-                     <p id="login">tiago_luch</p>
+                    <p id="nameLogin">tiago_luch</p>
                 </div>
-                 <p class="description">An instructor focused on helping people
-                     start programing for web
-                 </p>
-                   
-                 <div id="midiaSocial">
-                     <div id="youtube">
-                         <a href="https:/youtube/lucascsleite"target="_blanck"><img src="images/Icon ionic-logo-youtube.svg"  alt="youtube" class="fundo-social"></a>
-                     </div>
+                <p class="description">An instructor focused on helping people
+                    start programing for web
+                </p>
 
-                     <div id="instagram" >
-                         <a href="https:/instagram/lucascsleite" target="_blanck"> <img src="images/Instagram.svg" alt="instagram"class="fundo-social"></a>
-                     </div>
+                <div id="midiaSocial">
+                    <div id="youtube">
+                        <a href="https:/youtube/lucascsleite" target="_blanck"><img
+                                src="images/Icon ionic-logo-youtube.svg" alt="youtube" class="fundo-social"></a>
+                    </div>
 
-                     <div id="facebook">
-                         <a href="https:/facebook/lucascsleite" target="_blanck"><img src="images/Facebook.svg" alt="facebook"class="fundo-social"></a>
-                     </div>
+                    <div id="instagram">
+                        <a href="https:/instagram/lucascsleite" target="_blanck"> <img src="images/Instagram.svg"
+                                alt="instagram" class="fundo-social"></a>
+                    </div>
 
-                     <div id="twitter">
-                         <a href="https:/twitter/lucascsleite"target="_blanck"> <img src="images/Twitter.svg" alt=" twitter"class="fundo-social"></a> 
-                     </div>
-                 </div>
+                    <div id="facebook">
+                        <a href="https:/facebook/lucascsleite" target="_blanck"><img src="images/Facebook.svg"
+                                alt="facebook" class="fundo-social"></a>
+                    </div>
+
+                    <div id="twitter">
+                        <a href="https:/twitter/lucascsleite" target="_blanck"> <img src="images/Twitter.svg"
+                                alt=" twitter" class="fundo-social"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <script>
-
-
-        const links = {
-            youtube:'lucascsleite',
-            instagram:'lucascsleite',
-            facebook: 'lucascsleite',
-            twitter:'lucascsleite',
-        }
-    
-     
-    function changeName(){
-       //document.getElementById('userName').textContent = 'Lucas Leite'
-       // userName.textContent = 'Lucas Leite'
-     for(let div of midiaSocial.children){
-       const social = div.getAttribute('id')
-
-       div.children[0].href = `https://${social}.com/${links[social]}`
-
-       console.log(div.children[0].href)
-     }
-    
-   
-   
-     
-    } 
-    
-       const url = 'https://api.github.com/users/leitecsleite'; 
-
-        fetch(url,{
-            method:'get'
-        })
-        .then(function(response){
-           response.json()
-        .then(function (result){
-            const data = result; 
-
-            const {avatar_url,name, login} = data;
-
-            document.getElementById('userName').textContent = name; 
-            document.getElementById('login').textContent = login;
-            document.getElementById('fotoPerfil').src = avatar_url
-            console.log(events_url,name, login)   
-        })
-        })
-        .catch(function(err){
-            console.log(err)
-        })
-        
-    changeName(); 
-    </script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
